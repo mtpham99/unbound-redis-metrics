@@ -1,0 +1,6 @@
+# update blocklist everyday at midnight
+* 0 * * * su -s /bin/sh -c '/scripts/update_blocklist.sh && unbound-control -c /etc/unbound.conf reload_keep_cache' unbound
+
+# update root anchors at midnight on first day of each month
+0 0 1 * * su -s /bin/sh -c '/scripts/update_roothints.sh && unbound-control -c /etc/unbound.conf reload_keep_cache' unbound
+
