@@ -1,7 +1,10 @@
 # Unbound-Redis-Metrics
 
-Dockerfile to build a container image for running [unbound dns](https://www.nlnetlabs.nl/projects/unbound/about/) using [redis](https://redis.io/) as a cache database. Also includes a [prometheus](https://prometheus.io/) exporter and [promtail/loki](https://grafana.com/docs/loki/latest/) log scraper written by [ar51an](https://github.com/ar51an) for usage with [ar51an's grafana unbound-dashboard](https://github.com/ar51an/unbound-dashboard).
+Dockerfile to build a container image for running [Unbound DNS](https://www.nlnetlabs.nl/projects/unbound/about/) using [Redis](https://redis.io/) as a cache database. Also includes a [metrics exporter](https://github.com/ar51an/unbound-exporter) for [Prometheus](https://prometheus.io/) and [Loki/Promtail log scraper](https://github.com/ar51an/unbound-dashboard) for usage with [ar51an's grafana unbound-dashboard](https://github.com/ar51an/unbound-dashboard).
 
+[Unbound DNS dashboard](https://github.com/ar51an/unbound-dashboard) is separate and available [here](https://github.com/ar51an/unbound-dashboard).
+
+All credit for the [Unbound dashboard](https://github.com/ar51an/unbound-dashboard), [Prometheus metrics exporter](https://github.com/ar51an/unbound-exporter), and [Loki/Promtail config](https://github.com/ar51an/unbound-dashboard)] goes to [@Ar51an](https://github.com/ar51an).
 
 ## Required Environment Variables
 
