@@ -4,7 +4,7 @@ Dockerfile to build a container image for running [Unbound DNS](https://www.nlne
 
 [Unbound DNS dashboard](https://github.com/ar51an/unbound-dashboard) is separate and available [here](https://github.com/ar51an/unbound-dashboard).
 
-All credit for the [Unbound dashboard](https://github.com/ar51an/unbound-dashboard), [Prometheus metrics exporter](https://github.com/ar51an/unbound-exporter), and [Loki/Promtail config](https://github.com/ar51an/unbound-dashboard)] goes to [@Ar51an](https://github.com/ar51an).
+All credit for the [Unbound dashboard](https://github.com/ar51an/unbound-dashboard), [Prometheus metrics exporter](https://github.com/ar51an/unbound-exporter), and [Loki/Promtail config](https://github.com/ar51an/unbound-dashboard) goes to [@Ar51an](https://github.com/ar51an).
 
 ## Required Environment Variables
 
