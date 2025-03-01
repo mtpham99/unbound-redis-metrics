@@ -1,4 +1,4 @@
-FROM alpine:latest as builder-base
+FROM alpine:3.21.3 as builder-base
 
 ENV CFLAGS="-O3 -flto" \
     BUILD_DEPS="gcc make libc-dev go protobuf-c-dev ca-certificates curl tar gnupg git openssl-dev libevent-dev nghttp2-dev libsodium-dev hiredis-dev expat-dev libmnl-dev"
@@ -9,7 +9,7 @@ RUN set -xeu && \
 
 FROM builder-base as redis
 
-ENV REDIS_VERSION=7.4.0
+ENV REDIS_VERSION=7.4.2
 
 ENV REDIS_SOURCE=https://download.redis.io/releases/redis-${REDIS_VERSION}.tar.gz \
     REDIS_SHA256=https://raw.githubusercontent.com/redis/redis-hashes/master/README
@@ -29,7 +29,7 @@ RUN set -xeu && \
 
 FROM builder-base as unbound
 
-ENV UNBOUND_VERSION=1.20.0
+ENV UNBOUND_VERSION=1.22.0
 
 ENV UNBOUND_SOURCE=https://nlnetlabs.nl/downloads/unbound/unbound-${UNBOUND_VERSION}.tar.gz \
     UNBOUND_SHA256=https://www.nlnetlabs.nl/downloads/unbound/unbound-${UNBOUND_VERSION}.tar.gz.sha256 \
@@ -95,7 +95,7 @@ RUN set -xeu && \
     cp unbound-exporter /usr/local/bin
 
 
-FROM alpine:latest
+FROM alpine:3.21.3
 
 ENV RUNTIME_DEPS="ca-certificates curl protobuf-c openssl libevent nghttp2 libsodium hiredis expat-dev libmnl sed grep coreutils drill dcron loki-promtail logrotate"
 
